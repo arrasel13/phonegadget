@@ -67,16 +67,41 @@
         </div>
 
         <div class="mt-14 flex flex-col justify-center items-center">
+            <!-- Spinner -->
+            <div id="loadding-spinner" class="flex justify-center items-center min-h-full hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+
+            <!-- Search Result -->
             <div class="grid grid-cols-3 gap-6" id="phone-container">
             </div>
-            <div class="mt-12">
-                <button class="btn bg-[#0D6EFD] hover:bg-[#0D6EFD] text-white px-9 py-4">Show All</button>
+            <div id="show-all-container" class="mt-12 hidden">
+                <button onclick="handleShowAll()" class="btn bg-[#0D6EFD] hover:bg-[#0D6EFD] text-white px-9 py-4">Show All</button>
             </div>
         </div>
-
-
     </section>
     <!-- search phones end -->
+
+    <!-- Show details modal start -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="">open modal</button> -->
+    <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            
+            <div class="card" id="modal-content-container">
+                               
+            </div>
+
+
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-error text-white">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Show details modal end -->
 
     <!-- Main end -->
     <footer class="bg-[#0D6EFD0D]">
